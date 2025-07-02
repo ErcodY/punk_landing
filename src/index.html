@@ -1,17 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punkap</title>
+    <link rel="shortcut icon" href="path/to/icon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="dark-theme">
+<button id="themeToggle" class="btn btn-dark-outline-custom position-absolute top-0 end-0 m-4">
+    <i class="fas fa-moon"></i> Темная тема
+</button>
 
-<body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
+<div class="d-flex flex-column justify-content-center align-items-center text-center text-white min-vh-100 main-bg">
+    <div class="container">
+        <br><br><br>
+        <h1 class="display-1 fw-bold mb-3 animate__animated animate__fadeInDown">PUNKAP</h1>
+        <p class="lead fs-3 mb-5 animate__animated animate__fadeInUp">create, wear, repeat</p>
+
+        <div class="col-lg-8 mx-auto mb-5 animate__animated animate__fadeIn">
+            <h2 class="h4 mb-3">О нас</h2>
+            <p class="fs-5">
+                Punkap, это Гик проект, основанный в 2020 году.
+                Наш профиль это производство и продажа качественного Мерча: <br>Фигурки, Манги, Одежда, Значки, Стикеры,и многое другое
+            </p>
+            <p class="fs-5">
+                💥Скоро открытие сайта!
+                Следи за новостями, чтобы не пропустить индивидуальные скидки и предложения <i class="fas fa-gift"></i>
+            </p>
+
+            <div class="accordion accordion-flush" id="whatWeDoMainAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingWhatWeDo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhatWeDo" aria-expanded="false" aria-controls="collapseWhatWeDo">
+                            <h2 class="h4 mb-0">Мы занимаемся:</h2> </button>
+                    </h2>
+                    <div id="collapseWhatWeDo" class="accordion-collapse collapse" aria-labelledby="headingWhatWeDo" data-bs-parent="#whatWeDoMainAccordion">
+                        <div class="accordion-body text-start">
+                            <ul class="list-unstyled lst"> <li class="mb-2">
+                                • Созданием Индивидуального и кастомизированного мерча на заказ <i class="fas fa-t-shirt"></i>
+                            </li>
+                                <li class="mb-2">
+                                    • Продажей Брендовых коллекционных товаров (Funko, Bandai, Sega,Mattel и др)
+                                    <svg height="25" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="vertical-align: middle;">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M256 472.153L176.892 512l-41.725-81.129-86.275-16.654 11.596-91.422L0 256l60.488-66.795-11.596-91.422 86.275-16.654L176.892 0 256 39.847 335.108 0l41.725 81.129 86.275 16.654-11.596 91.422L512 256l-60.488 66.795 11.596 91.422-86.275 16.654L335.108 512z" fill="#4285f4"/>
+                                            <path d="M211.824 284.5L171 243.678l-36 36 40.824 40.824-.063.062 36 36 .063-.062.062.062 36-36-.062-.062L376.324 192l-36-36z" fill="#fff"/>
+                                        </g>
+                                    </svg>
+                                </li>
+                                <li class="mb-2">
+                                    • Оптовыми и розничными поставщиками Аниме и Гик продукции:
+                                    <ul class="list-unstyled ms-4 mt-2">
+                                        <li>- Фигурки</li>
+                                        <li>- Значки</li>
+                                        <li>- Стикеры</li>
+                                        <li>- Постеры</li>
+                                        <li>- Плюшевые игрушки</li>
+                                        <li>- Акриловые фигурки</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-links animate__animated animate__fadeInUp mb-5">
+            <a href="https://www.instagram.com/punkap_baku/?hl=en" target="_blank" class="text-white mx-3 fs-3"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/punkap.baku/" target="_blank" class="text-white mx-3 fs-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://t.me/Hisoka26" target="_blank" class="text-white mx-3 fs-3"><i class="fab fa-telegram"></i></a>
+            <a href="https://wa.me/994558047883" target="_blank" class="text-white mx-3 fs-3"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@punkap_baku" target="_blank" class="text-white mx-3 fs-3"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <div class="email-signup-section col-lg-6 mx-auto mb-5 animate__animated animate__fadeIn">
+            <h3 class="display-5 fw-bold mb-4">Хотите быть первыми?</h3>
+            <p class="lead mb-4">Получите эксклюзивные скидки до 50% и ранний доступ!</p>
+            <button class="btn btn-outline-light btn-lg" type="button" data-bs-toggle="modal">
+                Подписаться
+            </button>
+            <div id="emailHelp" class="form-text text-muted small mt-3">Мы никогда не будем делиться вашими данными ни с кем другим.</div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-bottom border-secondary">
+                <h5 class="modal-title" id="registrationModalLabel">Регистрация для раннего доступа</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+                <form>
+                    <div class="mb-3">
+                        <label for="regName" class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control bg-secondary text-white border-0" id="regName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="regEmail" class="form-label">Email адрес</label>
+                        <input type="email" class="form-control bg-secondary text-white border-0" id="regEmail" aria-describedby="emailHelpModal" required>
+                        <div id="emailHelpModal" class="form-text text-muted">Мы никогда не будем делиться вашей почтой.</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                        <label class="form-check-label" for="termsCheck">Я согласен с <a href="#" class="text-info text-decoration-none">условиями использования</a></label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-top border-secondary justify-content-center">
+                <button type="submit" class="btn btn-primary px-5">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/theme-toggle.js"></script>
 </body>
-
 </html>

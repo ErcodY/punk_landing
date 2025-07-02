@@ -1,0 +1,397 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    transition: background 0.7s ease-in-out, color 0.7s ease-in-out;
+}
+/* Темы */
+
+@font-face {
+    font-family: stnd-reg;
+    src: url(../webfonts/TTSquares-Regular.ttf);
+}
+@font-face {
+    font-family: stnd-bold;
+    src: url(../webfonts/TTSquares-Bold.ttf);
+}
+h1, h2, h3 {
+    font-family: stnd-bold !important;
+}
+p, a, li, div, button {
+    font-family: stnd-reg !important;
+}
+
+:root {
+    /* Темная тема */
+    --main-bg-start: #222222;
+    --main-bg-end: #000000;
+    --text-color: #f0f0f0;
+    --heading-color: #f0f0f0;
+    --about-text-color: #e0e0e0;
+    --social-link-color: #f0f0f0;
+    --social-link-hover-color: #aaaaaa;
+
+    --form-control-bg: rgba(255, 255, 255, 0.1);
+    --form-control-border: rgba(255, 255, 255, 0.3);
+    --form-control-placeholder: rgba(255, 255, 255, 0.6);
+    --button-outline-border: rgba(255, 255, 255, 0.4);
+    --button-outline-color: #f0f0f0;
+    --button-outline-hover-bg: rgba(255, 255, 255, 0.25);
+    --button-outline-hover-border: #ffffff;
+    --button-outline-hover-color: #ffffff;
+    --form-text-color: rgba(255, 255, 255, 0.6);
+
+    --modal-bg: #212529;
+    --modal-text: #f8f9fa;
+    --modal-border: #495057;
+    --modal-input-bg: #6c757d;
+    --modal-input-text: #f8f9fa;
+    --modal-link-color: #17a2b8;
+    --modal-input-focus-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+
+    --accordion-item-border-color: rgba(255, 255, 255, 0.2);
+    --accordion-button-bg: transparent;
+    --accordion-button-color: #f0f0f0;
+    --accordion-button-active-bg: rgba(255, 255, 255, 0.05);
+    --accordion-button-active-color: #ffffff;
+    --accordion-icon-filter: invert(0.8);
+    --accordion-body-color: #e0e0e0;
+}
+
+body.light-theme {
+    /* Светлая тема */
+    --main-bg-start: #f8f9fa;
+    --main-bg-end: #ffffff;
+    --text-color: #212529;
+    --heading-color: #343a40;
+    --about-text-color: #495057;
+    --social-link-color: #343a40;
+    --social-link-hover-color: #6c757d;
+
+    --form-control-bg: rgba(0, 0, 0, 0.05);
+    --form-control-border: rgba(0, 0, 0, 0.2);
+    --form-control-placeholder: rgba(0, 0, 0, 0.5);
+    --button-outline-border: rgba(0, 0, 0, 0.4);
+    --button-outline-color: #212529;
+    --button-outline-hover-bg: rgba(0, 0, 0, 0.1);
+    --button-outline-hover-border: #000000;
+    --button-outline-hover-color: #000000;
+    --form-text-color: rgba(0, 0, 0, 0.5);
+
+    --modal-bg: #f8f9fa;
+    --modal-text: #212529;
+    --modal-border: #dee2e6;
+    --modal-input-bg: #e9ecef;
+    --modal-input-text: #212529;
+    --modal-link-color: #007bff;
+    --modal-input-focus-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
+
+    --accordion-item-border-color: rgba(0, 0, 0, 0.1);
+    --accordion-button-bg: transparent;
+    --accordion-button-color: #343a40;
+    --accordion-button-active-bg: rgba(0, 0, 0, 0.03);
+    --accordion-button-active-color: #000000;
+    --accordion-icon-filter: invert(0);
+    --accordion-body-color: #495057;
+
+}
+
+.main-bg {
+    background-image: linear-gradient(135deg, var(--main-bg-start) 0%, var(--main-bg-end) 100%);
+    background-size: cover, auto;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    color: var(--text-color);
+    transition: background 0.7s ease-in-out, color 0.7s ease-in-out;
+}
+
+body:not(.light-theme) .main-bg {
+    background-image: url('../assets/tex.png'), linear-gradient(135deg, var(--main-bg-start) 0%, var(--main-bg-end) 100%);
+    background-blend-mode: multiply;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+    transition: color 0.7s ease-in-out;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .email-signup-section .input-group {
+        width: 80% !important;
+    }
+}
+
+.lead, .fs-5 {
+    color: var(--about-text-color);
+    transition: color 0.7s ease-in-out;
+}
+
+.lst {
+    line-height: 40px;
+}
+
+.h4 {
+    color: var(--heading-color);
+    transition: color 0.7s ease-in-out;
+}
+
+.social-links a {
+    color: var(--social-link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--social-link-hover-color) !important;
+}
+.btn-dark-outline-custom {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #f0f0f0;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.btn-dark-outline-custom:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #f0f0f0;
+    color: #ffffff;
+}
+
+.btn-light-outline-custom {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: #343a40;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.btn-light-outline-custom:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: #000000;
+    color: #000000;
+}
+
+/* ======================================= */
+/* Стили для секции подписки (если есть)   */
+/* ======================================= */
+.email-signup-section .btn-outline-light {
+    border-color: var(--button-outline-border);
+    color: var(--button-outline-color);
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease; /* Для интерактивности кнопки */
+}
+
+.email-signup-section .btn-outline-light:hover {
+    background-color: var(--button-outline-hover-bg);
+    color: var(--button-outline-hover-color) !important;
+    border-color: var(--button-outline-hover-border) !important;
+}
+
+/* ======================================= */
+/* Стили для аккордеона                    */
+/* ======================================= */
+
+.accordion-item {
+    background-color: transparent !important; /* Фон всегда прозрачный */
+    border: 1px solid var(--accordion-item-border-color) !important; /* Граница от переменной */
+    transition: border-color 0.5s ease;
+    margin-bottom: 0.5rem; /* Небольшой отступ между элементами аккордеона */
+    border-radius: .25rem; /* Стандартный Bootstrap border-radius для аккордеона */
+}
+.accordion-item:last-of-type {
+    margin-bottom: 0; /* Убираем отступ у последнего элемента */
+}
+.accordion-item:first-of-type {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.accordion-item:last-of-type {
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+
+.accordion-button {
+    background-color: var(--accordion-button-bg) !important;
+    color: var(--accordion-button-color) !important;
+    font-weight: 600;
+    /* Убираем стандартный box-shadow от Bootstrap */
+    box-shadow: none !important;
+    transition: background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease;
+    border-radius: .25rem !important; /* Для корректного border-radius в свернутом состоянии */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--accordion-button-active-bg) !important; /* Фон активной кнопки */
+    color: var(--accordion-button-active-color) !important; /* Цвет активной кнопки */
+    border-bottom: 1px solid var(--accordion-item-border-color) !important; /* Нижняя граница при открытии */
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    border-bottom-left-radius: 0 !important; /* Убираем радиус снизу для открытого состояния */
+    border-bottom-right-radius: 0 !important;
+}
+
+/* Цвет стрелки аккордеона */
+.accordion-button::after {
+    filter: var(--accordion-icon-filter) !important;
+    transition: filter 0.5s ease;
+    background-image: var(--bs-accordion-btn-icon) !important; /* Используем дефолтную иконку Bootstrap */
+    transform: var(--bs-accordion-btn-icon-transform) !important; /* Иконка поворота */
+}
+
+/* Для H2 внутри кнопки аккордеона - чтобы он наследовал цвет кнопки */
+.accordion-button .h4 {
+    color: inherit !important; /* Наследуем цвет от родительской кнопки */
+    transition: color 0.5s ease;
+    margin-bottom: 0; /* Убираем отступ */
+}
+
+
+/* Стили для содержимого аккордеона */
+.accordion-body {
+    background-color: transparent !important; /* Фон всегда прозрачный */
+    color: var(--accordion-body-color) !important;
+    transition: color 0.5s ease;
+    padding-top: 0.5rem; /* Небольшой верхний отступ */
+    padding-bottom: 1rem;
+    padding-left: 1.25rem; /* Стандартный левый паддинг Bootstrap аккордеона */
+    padding-right: 1.25rem; /* Стандартный правый паддинг Bootstrap аккордеона */
+}
+
+.accordion-body ul {
+    list-style: none; /* Убираем стандартные маркеры */
+    padding-left: 0; /* Убираем стандартный паддинг ul */
+    margin-bottom: 0;
+}
+
+.accordion-body ul li {
+    margin-bottom: 0.5rem; /* Небольшой отступ между пунктами списка */
+    line-height: normal; /* Сбрасываем line-height, если .lst его задает */
+}
+.accordion-body ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Вложенные списки внутри аккордеона */
+.accordion-body ul ul {
+    margin-left: 1rem; /* Отступ для вложенных списков */
+    margin-top: 0.5rem;
+    list-style: none; /* Убираем маркеры и здесь */
+}
+.accordion-body ul ul li {
+    margin-bottom: 0.2rem;
+}
+
+
+/* ======================================= */
+/* Стили для модального окна и его форм    */
+/* ======================================= */
+.modal-content {
+    background-color: var(--modal-bg) !important;
+    border-radius: 8px;
+    color: var(--modal-text) !important;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавнее для модала */
+}
+.modal-content .modal-header,
+.modal-content .modal-footer {
+    border-color: var(--modal-border) !important;
+    transition: border-color 0.5s ease; /* Плавнее для границ модала */
+}
+.modal-content .btn-close {
+    filter: invert(var(--bs-btn-close-white-filter)); /* Bootstrap utility for dark/light close btn */
+    transition: filter 0.5s ease; /* Для смены цвета крестика */
+}
+
+/* Поля ввода в модальном окне */
+.modal-body .form-control {
+    background-color: var(--modal-input-bg) !important;
+    color: var(--modal-input-text) !important;
+    border: 1px solid transparent !important; /* Убираем границу по умолчанию */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.modal-body .form-control:focus {
+    background-color: var(--modal-input-bg) !important; /* Сохраняем фон при фокусе */
+    border-color: var(--button-outline-border) !important;
+    border-radius: 100px;
+    /* Используем цвет границы кнопки */
+    box-shadow: var(--modal-input-focus-shadow) !important; /* Динамическая тень для фокуса */
+    color: var(--modal-input-text) !important;
+}
+
+/* Текст "We'll never share..." под полями ввода */
+.form-text.text-muted {
+    color: var(--form-text-color) !important;
+    transition: color 0.3s ease;
+}
+
+/* Ссылки в модальном окне (например, "условиями использования") */
+.modal-body a {
+    color: var(--modal-link-color) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.modal-body a:hover {
+    text-decoration: underline;
+}
+
+
+/* ======================================= */
+/* Анимации (без изменений)                */
+/* ======================================= */
+.animate__animated {
+    opacity: 0;
+}
+
+.animate__fadeInDown {
+    animation: fadeInDown 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.animate__fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.animate__fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
