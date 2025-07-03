@@ -103,6 +103,9 @@ body.light-theme {
     color: var(--text-color);
     transition: background 0.7s ease-in-out, color 0.7s ease-in-out;
 }
+i{
+    color: var(--text-color);
+}
 
 body:not(.light-theme) .main-bg {
     background-image: url('../assets/tex.png'), linear-gradient(135deg, var(--main-bg-start) 0%, var(--main-bg-end) 100%);
