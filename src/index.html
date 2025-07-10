@@ -82,8 +82,8 @@
 
         <div class="email-signup-section col-lg-6 mx-auto mb-5 animate__animated animate__fadeIn">
             <h3 class="display-5 fw-bold mb-4">Хотите быть первыми?</h3>
-            <p class="lead mb-4">Получите эксклюзивные скидки до 50% и ранний доступ!</p>
-            <button class="btn btn-outline-light btn-lg" type="button" data-bs-toggle="modal">
+            <p class="lead mb-4">Получите эксклюзивные скидки от 30% до 50%!</p>
+            <button class="btn btn-outline-light btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#registrationModal">
                 Подписаться
             </button>
             <div id="emailHelp" class="form-text text-muted small mt-3">Мы никогда не будем делиться вашими данными ни с кем другим.</div>
@@ -98,17 +98,15 @@
                 <h5 class="modal-title" id="registrationModalLabel">Регистрация для раннего доступа</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-start">
+            <div id="registrationMessage" class="mb-3" style="display:none; padding: 10px; border-radius: 6px; font-weight: 600;"></div>
+
                 <form>
+                    <p>Для того чтобы получить токен который дает доступ к индивидуальным скидкам в будущем пройдите регистрацию через нашего <a href="https://t.me/punkapbot">бота (@punkapbot)</a> и не удаляйте чат с ним!</p>
                     <div class="mb-3">
-                        <label for="regName" class="form-label">Ваше имя</label>
-                        <input type="text" class="form-control bg-secondary text-white border-0" id="regName">
+                        <label for="regToken" class="form-label">Ваш Токен</label>
+                        <input type="text" class="form-control bg-secondary text-white border-0" id="regToken">
                     </div>
-                    <div class="mb-3">
-                        <label for="regEmail" class="form-label">Email адрес</label>
-                        <input type="email" class="form-control bg-secondary text-white border-0" id="regEmail" aria-describedby="emailHelpModal" required>
-                        <div id="emailHelpModal" class="form-text text-muted">Мы никогда не будем делиться вашей почтой.</div>
-                    </div>
+
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="termsCheck" required>
                         <label class="form-check-label" for="termsCheck">Я согласен с <a href="#" class="text-info text-decoration-none">условиями использования</a></label>
@@ -123,5 +121,6 @@
 </div>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/theme-toggle.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
